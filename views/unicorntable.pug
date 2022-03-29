@@ -1,0 +1,27 @@
+html
+head
+body
+button
+	a(href="/add") Insert new data
+	table(border=2)
+		thead
+			th Name
+			th dob
+			th gender
+			th loves
+			th weight
+			th(colspan=2) Operations
+		tbody
+			each un,i in items
+				tr
+					td=un.name
+					td=un.dob
+					td=un.gender
+					td=un.loves
+					td=un.weight
+					td
+						button
+							a(href="edit/"+i) Edit
+					td 
+						button
+							a(href="delete/"+un._id) Delete
